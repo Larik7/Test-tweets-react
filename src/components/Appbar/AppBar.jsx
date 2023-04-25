@@ -1,12 +1,11 @@
 import { Navigation } from '../Navigation/Navigation';
-// import { useAuth } from 'hooks';
-// import css from './AppBar.module.css';
+import { Header} from './AppBar.styled';
 
 export const AppBar = () => {
 
   return (
-    <header>
+    <Header>
       <Navigation />
-    </header>
+    </Header>
   );
 };
