@@ -1,16 +1,14 @@
-import { useEffect } from "react";
-import { TweetsList } from "../componens/TweetsList/TweetsList";
-import { fetchTweets } from "../redux/operations";
-import { useDispatch } from "react-redux/es/exports";
+// import { useEffect } from "react";
+import { TweetsList } from "./componens/TweetsList/TweetsList";
 import { Link } from "react-router-dom";
-import { Filter } from "../componens/Filter/Filter";
+import { Filter } from "./componens/Filter/Filter";
 
 export default function Tweets() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchTweets());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchTweets());
+  // }, [dispatch]);
 
   return (
     <div>

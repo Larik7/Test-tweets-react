@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Layout } from './components/SharedLayout/SharedLayout';
 import './App.css'
 
-const HomePage = lazy(() => import('./pages/Home'))
+const HomePage = lazy(() => import('./pages/HomePage'))
 const Tweets = lazy(() => import('./pages/Tweets'))
 
 function App() {
