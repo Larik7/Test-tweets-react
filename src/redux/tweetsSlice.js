@@ -31,8 +31,19 @@ const tweetsSlice  = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
+        state.items = state.items.map(item => {
+          if (item.id === action.payload.id) {
+            return {
+              ...item,
+              followers: action.payload.followers,
+              isFollowing: action.payload.isFollowing,
+            };
+          }
+
+          return item;
+        });
       })
       .addCase(editCounts.rejected, handleRejected)
 });
 
-export const contactsReducer = tweetsSlice .reducer;
+export const tweetsReducer = tweetsSlice.reducer;

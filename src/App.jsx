@@ -1,10 +1,9 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import { SharedLayout } from './components/SharedLayout/SharedLayout';
-import './App.css'
 
 const HomePage = lazy(() => import('./pages/Home'))
-const Tweets = lazy(() => import('./pages/Tweets'))
+const TweetsPage = lazy(() => import('./pages/Tweets'))
 
 function App() {
 
@@ -14,7 +13,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route
           path="/Tweets"
-          element={<Tweets />} />
+          element={<TweetsPage />} />
       </Route>
     </Routes>
   )

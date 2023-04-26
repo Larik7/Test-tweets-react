@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { patchUser } from '../../redux/operations';
+import { editCounts } from '../../redux/operations';
 import { setFollow } from '../../redux/tweetsSlice';
 import { Avatar, Counts, FollowBtn, Info, Stats } from './TweetsItem.styled';
 
@@ -8,7 +8,7 @@ export const Tweet = ({ item }) => {
     const dispatch = useDispatch();
 
     const handleFollow = () => {
-        dispatch(patchUser(item));
+        dispatch(editCounts(item));
         dispatch(setFollow(item.id));
         
     };
