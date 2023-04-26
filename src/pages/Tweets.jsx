@@ -2,14 +2,14 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useLocation } from "react-router-dom";
-import { Filter } from "..components/Filter/Filter";
-import { TweetsList } from "../components/TweetsList/TweetsList";
+import { Filter } from "../Components/Filter/Filter";
+import { TweetsList } from "../Components/TweetsList/TweetsList";
 import { fetchTweets } from "../redux/operations";
 import { selectError, selectIsLoading } from "../redux/selectors";
 import { HiArrowLeft } from "react-icons/hi";
-import { GoBackLink, TweetsContainer } from "../components/SharedLayout/SharedLayout.styled";
-import { Loader } from "../components/Loader/Loader";
-// import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { GoBackLink, TweetsContainer } from "../Components/SharedLayout/SharedLayout.styled";
+import { Loader } from "../Components/Loader/Loader";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const Tweets = () => {
@@ -24,8 +24,10 @@ const Tweets = () => {
     }, [dispatch]);
 
     return (
-       <>
-       <title>Tweets</title>
+        <HelmetProvider>
+            <Helmet>
+                <title>Tweets</title>
+            </Helmet>
             <TweetsContainer>
                 <GoBackLink to={goBack.current}><HiArrowLeft size='12' />Go Back</GoBackLink>
                 <Filter />
@@ -33,33 +35,11 @@ const Tweets = () => {
                     : error ? <p>{error}</p>
                         : <TweetsList />}
             </TweetsContainer>
-       </>
+        </HelmetProvider>
+            
+
+
     )
 };
 
 export default Tweets;
-
-// import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux"
-// import { useLocation } from "react-router-dom";
-// import { TweetsList } from "./componens/TweetsList/TweetsList";
-// import { Link } from "react-router-dom";
-// import { Filter } from "./componens/Filter/Filter";
-
-// export default function Tweets() {
-//   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     dispatch(fetchTweets());
-//   }, [dispatch]);
-
-//   return (
-//     <div>
-//       <Link to="/">
-//         <button type="click">Back</button>
-//       </Link>
-//       <Filter />
-//       <TweetsList />
-//     </div>
-//   );
-// }

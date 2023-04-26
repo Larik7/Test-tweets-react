@@ -1,12 +1,21 @@
-export default function Home() {
-  return (
-    <div>
-      <h1>
-        Welcome to tweets{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
-  );
-}
+import { HomeWrap, Title } from "../Components/SharedLayout/SharedLayout.styled";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+const Home = () => {
+
+    return (
+        <HelmetProvider>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
+            <HomeWrap>
+                <Title>
+                    Welcome to the TweetStats. More interesting things can be found on the Tweets page
+                </Title>
+            </HomeWrap>
+        </HelmetProvider>
+
+    )
+};
+
+export default Home;
