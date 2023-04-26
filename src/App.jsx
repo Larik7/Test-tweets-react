@@ -1,16 +1,16 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom'
-import { Layout } from './components/SharedLayout/SharedLayout';
+import { SharedLayout } from './components/SharedLayout/SharedLayout';
 import './App.css'
 
-const HomePage = lazy(() => import('./pages/HomePage'))
+const HomePage = lazy(() => import('./pages/Home'))
 const Tweets = lazy(() => import('./pages/Tweets'))
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
         <Route
           path="/Tweets"
