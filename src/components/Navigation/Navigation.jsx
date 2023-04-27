@@ -1,10 +1,11 @@
-import {Nav, LinkPage} from './Navigation.styled'
+import { LinkPage, Nav } from './Navigation.styled';
 
 export const Navigation = () => {
-  return (
-    <Nav>
-      <LinkPage to="/">Home</LinkPage>
-      <LinkPage to="/tweets">Tweets</LinkPage>
-    </Nav>
-  );
+
+    return (
+        <Nav>
+            <LinkPage to='/'>Home</LinkPage>
+            <LinkPage to='/tweets'>Tweets</LinkPage>
+        </Nav>
+    )
 };
