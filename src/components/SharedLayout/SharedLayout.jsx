@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { AppBar } from '../AppBar/AppBar';
 
 
-export const SharedLayout = () => {
+export const Layout = () => {
     return (
         <div>
             <AppBar />

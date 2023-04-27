@@ -3,7 +3,7 @@ import { selectVisibleTweets } from "../../redux/selectors";
 import { Tweet } from "../TweetsItem/TweetsItem";
 import { LoadMoreBtn } from "../TweetsItem/TweetsItem.styled";
 import { Cards, ListItem } from "./TweetsList.styled";
-import { usePagination } from "../../hooks/usePaginations";
+import { usePagination } from "../../hooks/usePagination";
 
 export const TweetsList = () => {
   const tweets = useSelector(selectVisibleTweets);

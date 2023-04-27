@@ -2,13 +2,13 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useLocation } from "react-router-dom";
-import { Filter } from "../Components/Filter/Filter";
-import { TweetsList } from "../Components/TweetsList/TweetsList";
+import { Filter } from "../components/Filter/Filter";
+import { TweetsList } from "../components/TweetsList/TweetsList";
 import { fetchTweets } from "../redux/operations";
 import { selectError, selectIsLoading } from "../redux/selectors";
 import { HiArrowLeft } from "react-icons/hi";
-import { GoBackLink, TweetsContainer } from "../Components/SharedLayout/SharedLayout.styled";
-import { Loader } from "../Components/Loader/Loader";
+import { GoBackLink, TweetsContainer } from "../components/SharedLayout/SharedLayout.styled";
+import { Loader } from "../components/Loader/Loader";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
