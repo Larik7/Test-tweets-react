@@ -19,16 +19,6 @@ const initialState = {
 const tweetsSlice = createSlice({
     name: 'tweets',
     initialState: initialState,
-    reducers: {
-        setFollow(state, action) {
-           for (const user of state.items) {
-                if (user.id === action.payload) {
-                    user.isFollowing = !user.isFollowing;
-                    break;
-                }
-            }
-        }
-    },
     extraReducers: builder =>
         builder
             .addCase(fetchTweets.pending, handlePending)
@@ -53,4 +43,3 @@ const tweetsSlice = createSlice({
 });
 
 export const tweetsReducer = tweetsSlice.reducer;
-export const {setFollow} = tweetsSlice.actions;

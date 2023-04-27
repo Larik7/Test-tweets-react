@@ -1,21 +1,12 @@
-import { HomeWrap, Title } from "../Components/SharedLayout/SharedLayout.styled";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Home = () => {
+  return (
+    <>
+      <title>Home</title>
 
-    return (
-        <HelmetProvider>
-            <Helmet>
-                <title>Home</title>
-            </Helmet>
-            <HomeWrap>
-                <Title>
-                    Welcome to the TweetStats. More interesting things can be found on the Tweets page
-                </Title>
-            </HomeWrap>
-        </HelmetProvider>
-
-    )
+      <h1>Welcome to the Tweets</h1>
+    </>
+  );
 };
 
 export default Home;

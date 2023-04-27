@@ -8,15 +8,12 @@ export const Nav = styled.nav`
     gap: 30px;
 `;
 
-export const LinkPage = styled(NavLink)`
+export const NavPage = styled(NavLink)`
     font-size: 16px;
     text-decoration: none;
-<<<<<<< HEAD
-    
-=======
     color: #00212f;
     font-weight: 600;
->>>>>>> f251a64aa429e2cc3061fbfa0fbcb9145577fab6
+
     &.active {
         color: #f83369;
     }
