@@ -13,6 +13,7 @@ export const LinkPage = styled(NavLink)`
     font-size: 16px;
     color: #32a852;
     text-decoration: none;
+    
     &.active {
         color: #32a852;
     }
